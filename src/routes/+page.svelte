@@ -59,20 +59,22 @@
 <label for="date-time-input">Select a date and time:</label>
 <input
     bind:value={date}
-    on:change={triggerUpdate("date")}
+    on:change={() => triggerUpdate("date")}
     type="date"
     id="date-time-input"
     name="date"
 />
 <input
     bind:value={time}
-    on:change={triggerUpdate("time")}
+    on:change={() => triggerUpdate("time")}
     type="time"
     id="date-time-input"
     name="time"
 />
 
 <p>Unix Time is: {unixTime}</p>
+
+<button on:click={() => triggerUpdate("button")}>Update</button>
 
 <style>
     @import url("https://unpkg.com/@catppuccin/palette/css/catppuccin.css");
